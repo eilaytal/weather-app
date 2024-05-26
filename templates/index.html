@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif;
+            text-align: center; 
+            background-color: lightblue;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        form {
+            margin: 20px auto;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            margin-top: 20px;
+        }
+        .weather-info {
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        footer {
+            margin-top: 20px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (min-width: 600px) {
+            li {
+                display: inline-block;
+                width: calc(50% - 22px);
+                margin: 10px;
+            }
+        }
+        @media (min-width: 900px) {
+            li {
+                width: calc(33% - 22px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    <form method="post">
+        <input type="text" name="location" placeholder="Enter a city" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if error %}
+        <p class="error">Error: {{ error }}</p>
+    {% endif %}
+
+    {% if times %}
+        <div class="weather-info">
+            <h2>Weather Forecast for {{ location }}:</h2>
+            <ul>
+                {% for day_index in range(times|length) %}
+                    <li>
+                        <h3>{{ times[day_index] }}</h3>
+                        <p>Day Temperature: {{ temp_max[day_index] }}°C</p>
+                        <p>Night Temperature: {{ temp_min[day_index] }}°C</p>
+                        <p>Humidity: {{ humidity[day_index] }}%</p>
+                    </li>
+                {% endfor %}
+            </ul>
+            <p><b>Country:</b> {{ country }}</p>
+        </div>
+    {% endif %}
+    
+    <footer>
+        <a href="/weather/download_history">Download Search History</a>
+    </footer>
+</body>
+</html>
