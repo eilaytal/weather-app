@@ -1,3 +1,11 @@
+
+```markdown
+## Related Repositories
+
+- [Weather App EKS Terraform](https://github.com/eilaytal/weather-app-eks-terraform): Terraform configuration for deploying the Weather App on AWS EKS.
+- [Jenkins Pipeline](https://github.com/eilaytal/jenkins_pipeline): Jenkins pipeline for automating CI/CD processes for the Weather App.
+- [GitOps Manifests](https://github.com/eilaytal/gitops-manifests): GitOps manifests for managing the deployment of the Weather App.
+
 # Weather App
 
 A simple weather application built with Flask that retrieves and displays weather data for a specified location. It also allows users to download the search history.
@@ -11,7 +19,7 @@ A simple weather application built with Flask that retrieves and displays weathe
 
 ## Project Structure
 
-```plaintext
+```
 weatherapp/
 ├── app.py
 ├── requirements.txt
@@ -19,68 +27,62 @@ weatherapp/
 │   ├── index.html
 │   └── download_history.html
 ├── testing.py
-├── weather.py
+└── weather.py
 ```
 
 ## Installation
 
-1. **Clone the repository**:
+Clone the repository:
 
-    ```sh
-    git clone https://github.com/eilaytal/weather-app.git
-    cd weatherapp
-    ```
+```bash
+git clone https://github.com/eilaytal/weather-app.git
+cd weatherapp
+```
 
-2. **Create a virtual environment and activate it** (optional but recommended):
+Create a virtual environment and activate it (optional but recommended):
 
-    ```sh
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
 
-3. **Install dependencies**:
+Install dependencies:
 
-    ```sh
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
-1. **Run the application**:
+Run the application:
 
-    ```sh
-    python app.py
-    ```
+```bash
+python app.py
+```
 
-2. **Open your web browser and navigate to** `http://127.0.0.1:5000/weather`.
+Open your web browser and navigate to http://127.0.0.1:5000/weather.
 
-3. **Enter a city name to get the weather forecast**.
+Enter a city name to get the weather forecast.
 
 ## Routing
 
-### `/weather` [GET, POST]
-
-- **GET**: Renders the main page with a form to input the city name.
-- **POST**: Processes the city name submitted by the user, fetches the weather data, and displays it.
-
-### `/weather/download_history` [GET]
-
-- Lists all the files in the search_history directory, allowing users to see their search history.
-
-### `/weather/history_files/<filename>` [GET]
-
-- Downloads the specified search history file.
+- `/weather` [GET, POST]
+  - GET: Renders the main page with a form to input the city name.
+  - POST: Processes the city name submitted by the user, fetches the weather data, and displays it.
+- `/weather/download_history` [GET]
+  - Lists all the files in the search_history directory, allowing users to see their search history.
+- `/weather/history_files/<filename>` [GET]
+  - Downloads the specified search history file.
 
 ## Running Tests
 
 To run the tests, use the following command:
 
-```sh
+```bash
 python -m unittest discover tests
 ```
 
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
-
-
+```
