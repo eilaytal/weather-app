@@ -1,13 +1,14 @@
-## Related Repositories
-
-- [Weather App EKS Terraform](https://github.com/eilaytal/weather-app-eks-terraform): Terraform configuration for deploying the Weather App on AWS EKS.
-- [Jenkins Pipeline](https://github.com/eilaytal/jenkins_pipeline): Jenkins pipeline for automating CI/CD processes for the Weather App.
-- [GitOps Manifests](https://github.com/eilaytal/gitops-manifests): GitOps manifests for managing the deployment of the Weather App.
 
 # Weather App
 
 A simple weather application built with Flask that retrieves and displays weather data for a specified location. It also allows users to download the search history.
 
+## Related Repositories
+
+- [Weather App EKS Terraform](https://github.com/eilaytal/weather-app-eks-terraform): Terraform configuration for deploying the Weather App on AWS EKS.
+- [Jenkins Pipeline](https://github.com/eilaytal/jenkins_pipeline): Jenkins pipeline for automating CI/CD processes for the Weather App.
+- [GitOps Manifests](https://github.com/eilaytal/gitops-manifests): GitOps manifests for managing the deployment of the Weather App.
+  
 ## Features
 
 - Fetches weather data using the Open-Meteo API.
