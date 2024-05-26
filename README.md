@@ -27,7 +27,8 @@ weatherapp/
 │   ├── index.html
 │   └── download_history.html
 ├── testing.py
-└── weather.py
+├── weather.py
+└── Dockerfile
 ```
 
 ## Installation
@@ -66,13 +67,15 @@ Enter a city name to get the weather forecast.
 
 ## Routing
 
-- `/weather` [GET, POST]
-  - GET: Renders the main page with a form to input the city name.
-  - POST: Processes the city name submitted by the user, fetches the weather data, and displays it.
-- `/weather/download_history` [GET]
-  - Lists all the files in the search_history directory, allowing users to see their search history.
-- `/weather/history_files/<filename>` [GET]
-  - Downloads the specified search history file.
+/weather [GET, POST]
+- GET: Renders the main page with a form to input the city name.
+- POST: Processes the city name submitted by the user, fetches the weather data, and displays it.
+
+/weather/download_history [GET]
+- Lists all the files in the search_history directory, allowing users to see their search history.
+
+/weather/history_files/<filename> [GET]
+- Downloads the specified search history file.
 
 ## Running Tests
 
@@ -86,3 +89,5 @@ python -m unittest discover tests
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 ```
+
+This README.md file now includes the project structure with the Dockerfile included.
