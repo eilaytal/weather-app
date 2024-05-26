@@ -1,5 +1,3 @@
-
-```markdown
 ## Related Repositories
 
 - [Weather App EKS Terraform](https://github.com/eilaytal/weather-app-eks-terraform): Terraform configuration for deploying the Weather App on AWS EKS.
