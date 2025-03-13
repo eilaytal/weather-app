@@ -89,5 +89,3 @@ python -m unittest discover tests
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 ```
 
-This README.md file now includes the project structure with the Dockerfile included.
-
